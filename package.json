@@ -13,6 +13,7 @@
 	"keywords": [
 		"language"
 	],
+	"icon": "icon.png",
 	"engines": {
 		"vscode": "^1.75.0"
 	},
