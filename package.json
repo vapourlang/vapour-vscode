@@ -8,7 +8,7 @@
 		"type": "git",
 		"url": "https://github.com/vapourlang/vapour-vscode"
 	},
-	"publisher": "vscode-samples",
+	"publisher": "Vapour",
 	"categories": [],
 	"keywords": [
 		"language"
