@@ -1,0 +1,62 @@
+{
+	"name": "vapour-vscode",
+	"description": "Typed Superset of R",
+	"author": "Vapour",
+	"license": "MIT",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vapourlang/vapour-vscode"
+	},
+	"publisher": "vscode-samples",
+	"categories": [],
+	"keywords": [
+		"language"
+	],
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"activationEvents": [
+		"onLanguage:vapour"
+	],
+	"main": "./client/out/extension",
+	"contributes": {
+    "languages": [
+      {
+        "id": "vapour",
+        "aliases": [
+          "Vapour",
+          "vapour"
+        ],
+        "extensions": [
+          ".vp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vapour",
+        "scopeName": "source.vapour",
+        "path": "./syntaxes/vapour.tmLanguage.json"
+      }
+    ]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"lint": "eslint ./client/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^18.14.6",
+		"@typescript-eslint/eslint-plugin": "^7.1.0",
+		"@typescript-eslint/parser": "^7.1.0",
+		"eslint": "^8.57.0",
+		"mocha": "^10.3.0",
+		"typescript": "^5.3.3"
+	}
+}
